@@ -1,0 +1,27 @@
+section {
+    background-color: $grey-light;
+}
+
+.title {
+    height: 68px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Roboto';    
+}
+
+.sub-title {
+    text-align: center;
+}
+
+button {
+    height: 25px;
+    border: 1px;
+    border-radius: 30px;
+    background: linear-gradient(336deg, $color-primary 5%, $color-secondary 73%);
+    color: white;
+    font-weight: 900;
+    padding: 15px 16px;
+    margin-top: 30px;
+    align-items: center;
+}

@@ -1,0 +1,56 @@
+/* --------------------------------------------*/
+#logo {
+    width: 197px;
+    height: 36px;
+    padding: 0 19px 0 16px;           
+}
+  
+header {
+    align-items: center;     
+}
+
+h1 {
+    display :flex;
+    justify-content: center;
+    padding: 14px 89px 13px 89px; 
+} 
+
+.location {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey-2;
+    gap: 17px;
+}
+
+.fa-location-dot {
+    color: $grey;
+}
+
+input {
+    border: none;
+    color: $black;
+    font-size: $base-font-size; 
+    
+    &::placeholder  {
+        text-align: center;
+        background-color: $grey-2;
+        color: $grey;
+        font-style: normal;
+        font-weight: bold;  }
+}
+
+#length {
+    width:120px;
+    height: 18px;
+}
+
+@media only screen and (min-width: $xlarge) {
+    header {    
+        justify-content: center;
+        align-items: center;
+        height: 96px;     
+    }
+}

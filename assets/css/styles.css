@@ -1,0 +1,151 @@
+*, *:before, *:after {
+  box-sizing: content-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  /*  appearance: auto;
+    -webkit-appearance: none;*/
+  border-radius: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "roboto";
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/* Colors */
+/* Font size         */
+/* Colors-background */
+/* Responsive */
+/* --------------------------------------------*/
+#logo {
+  width: 197px;
+  height: 36px;
+  padding: 0 19px 0 16px;
+}
+
+header {
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 14px 89px 13px 89px;
+}
+
+.location {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  gap: 17px;
+}
+
+.fa-location-dot {
+  color: #353535;
+}
+
+input {
+  border: none;
+  color: #101010;
+  font-size: 16px;
+}
+input::-moz-placeholder {
+  text-align: center;
+  background-color: #EAEAEA;
+  color: #353535;
+  font-style: normal;
+  font-weight: bold;
+}
+input::placeholder {
+  text-align: center;
+  background-color: #EAEAEA;
+  color: #353535;
+  font-style: normal;
+  font-weight: bold;
+}
+
+#length {
+  width: 120px;
+  height: 18px;
+}
+
+@media only screen and (min-width: 1440px) {
+  header {
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+  }
+}
+section {
+  background-color: #F6F6F6;
+}
+
+.title {
+  height: 68px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Roboto";
+}
+
+.sub-title {
+  text-align: center;
+}
+
+button {
+  height: 25px;
+  border: 1px;
+  border-radius: 30px;
+  background: linear-gradient(336deg, #9356DC 5%, #FF79DA 73%);
+  color: white;
+  font-weight: 900;
+  padding: 15px 16px;
+  margin-top: 30px;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */
