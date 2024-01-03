@@ -1,88 +1,51 @@
-*, *:before, *:after {
-  box-sizing: content-box;
+/*@import "./base/reset";*/
+body {
+  font-family: "roboto";
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1224px;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+h1, h2, p, ol, li, a {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
-}
-
-footer, header, nav, section, main {
-  display: block;
-}
-
-body {
-  line-height: 1;
 }
 
 ol, ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 input {
   /*  appearance: auto;
-    -webkit-appearance: none;*/
+      -webkit-appearance: none;*/
   border-radius: 0;
   padding: 0;
 }
 
-body {
-  font-family: "roboto";
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
 /* Colors */
-/* Font size         */
 /* Colors-background */
+/* Font size  */
 /* Responsive */
-/* --------------------------------------------*/
-#logo {
-  width: 197px;
-  height: 36px;
-  padding: 0 19px 0 16px;
-}
-
+/************* Header & Location ************/
 header {
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 14px 89px 3px 89px;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
-  padding: 14px 89px 13px 89px;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
 }
 
 .location {
   display: flex;
-  width: 100%;
-  height: 50px;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 50px;
   background-color: #EAEAEA;
+  box-shadow: inset 0px 24px 5px -20px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   gap: 17px;
 }
 
@@ -115,37 +78,104 @@ input::placeholder {
   height: 18px;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1224px) {
   header {
     justify-content: center;
     align-items: center;
+    margin: 0;
     height: 96px;
   }
+  .location {
+    box-shadow: none;
+  }
 }
+/* ----------- home ------------------ */
 section {
   background-color: #F6F6F6;
+  padding-bottom: 57px;
 }
-
-.title {
+section h2 {
   height: 68px;
   font-size: 24px;
-  text-align: center;
   font-weight: 700;
-  font-family: "Roboto";
-}
-
-.sub-title {
   text-align: center;
+  padding: 36px 58px 0 42px;
+}
+section p {
+  text-align: center;
+  font-size: 18px;
+  color: #353535;
+  margin: 0 26px 0 34px;
 }
 
-button {
-  height: 25px;
-  border: 1px;
-  border-radius: 30px;
-  background: linear-gradient(336deg, #9356DC 5%, #FF79DA 73%);
-  color: white;
-  font-weight: 900;
-  padding: 15px 16px;
-  margin-top: 30px;
+nav h2 {
+  margin-left: 20px;
+  padding: 48px 0 0 0;
+}
+
+nav ol {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  nav ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+nav li {
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 1224px) {
+  section h2 {
+    font-size: 40px;
+  }
+}
+button {
+  display: block;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(356deg, #9356DC 8%, #FF79DA 100%);
+  box-shadow: 0 8px 8px 0 rgba(24, 23, 23, 0.25);
+  color: white;
+  font-size: 17.4px;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+  padding: 13px 18.75px;
+  margin: 27px auto auto;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(356deg, #a16be0, #ff93e1);
+}
+
+nav li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 72px;
+  width: 322px;
+  background: #F6F6F6;
+  box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 20px;
+  margin: 26px 20px 24.92px 32.51px;
+  cursor: pointer;
+}
+nav li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #101010;
+}
+
+.fa-mobile-screen-button, .fa-list {
+  color: #7E7E7E;
+}
+
+.fa-store {
+  color: #9356DC;
 }/*# sourceMappingURL=styles.css.map */

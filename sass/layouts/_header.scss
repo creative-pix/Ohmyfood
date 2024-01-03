@@ -1,32 +1,28 @@
-/* --------------------------------------------*/
-#logo {
-    width: 197px;
-    height: 36px;
-    padding: 0 19px 0 16px;           
-}
-  
+/************* Header & Location ************/
 header {
-    align-items: center;     
+    display: flex;
+    justify-content: center;    
+    margin: 14px 89px 3px 89px;
 }
-
+    
 h1 {
-    display :flex;
-    justify-content: center;
-    padding: 14px 89px 13px 89px; 
-} 
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: 400;
+}
 
 .location {
     display: flex;
-    width: 100%;
-    height: 50px;
     justify-content: center;
     align-items: center;
-    background-color: $grey-2;
+    width: 100%;
+    height: 50px;
+    background-color: $grey-lighten;
+    box-shadow: inset 0px 24px 5px -20px $grey-line,0px 10px 15px -3px $grey-line;
     gap: 17px;
 }
 
 .fa-location-dot {
-    color: $grey;
+    color: #353535;
 }
 
 input {
@@ -36,14 +32,14 @@ input {
     
     &::placeholder  {
         text-align: center;
-        background-color: $grey-2;
-        color: $grey;
+        background-color: $grey-lighten;
+        color: #353535;
         font-style: normal;
         font-weight: bold;  }
 }
 
 #length {
-    width:120px;
+    width: 120px;
     height: 18px;
 }
 
@@ -51,6 +47,11 @@ input {
     header {    
         justify-content: center;
         align-items: center;
+        margin: 0;
         height: 96px;     
+    }
+    
+    .location {
+        box-shadow: none;
     }
 }

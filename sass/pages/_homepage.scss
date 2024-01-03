@@ -1,27 +1,54 @@
-section {
+/* ----------- home ------------------ */
+section { 
     background-color: $grey-light;
+    padding-bottom: 57px;
+
+    h2 {
+        height: 68px;
+        font-size: 24px;
+        font-weight: 700;    
+        text-align: center;
+        padding : 36px 58px 0 42px;
+    }
+    p {
+        text-align: center;
+        font-size: 18px;
+        color : $grey;
+        margin: 0 26px 0 34px;
+    }     
+}    
+
+nav h2 {
+    margin-left: 20px;
+    padding: 48px 0 0 0;
 }
 
-.title {
-    height: 68px;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-    font-family: 'Roboto';    
+nav ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
 
-.sub-title {
-    text-align: center;
-}
+@media only screen and (min-width: $medium) {
+            
+    nav ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;           
+        }  
+    }
 
-button {
-    height: 25px;
-    border: 1px;
-    border-radius: 30px;
-    background: linear-gradient(336deg, $color-primary 5%, $color-secondary 73%);
-    color: white;
-    font-weight: 900;
-    padding: 15px 16px;
-    margin-top: 30px;
-    align-items: center;
+    nav li {
+        margin-left: 0;
+    }
+
+@media only screen and ( min-width: $xlarge) {
+
+    section {
+        
+       h2 {
+        font-size: 40px;
+       }    
+    }
 }
+   
