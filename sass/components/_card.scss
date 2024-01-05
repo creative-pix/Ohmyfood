@@ -1,0 +1,78 @@
+/*************   cards  ***********/
+.container {
+    display: flex;
+    flex-direction: column;   
+    margin: 0 17px;
+    gap: 18px;   
+}
+
+.container .card {
+    display: flex;
+    flex-direction: column;
+    height: 251px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;     
+}
+
+.card {
+
+    img {        
+        height: 174px;
+        object-fit: cover;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;  
+    }
+
+    .card-txt {
+        padding: 12px 0 12px 13px;
+    }
+
+    h3 {
+        margin-bottom: 4px;
+    }
+
+    p {
+        text-align: start;
+        margin: 0;
+    }
+
+    button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        color: $color-primary;
+        bottom: 33px;
+        right: 33px;
+        width: 22px;
+        height: 21px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and ( min-width: $medium) {
+
+    .container {
+        display: grid;
+        grid-template-columns : repeat(2, 1fr); 
+        grid-template-rows : 1fr 1fr;
+        row-gap: 50px;
+        column-gap: 100px;
+        margin-top : 30px;
+    }
+}
+
+@media only screen and ( min-width: $xlarge) {
+
+    .container {
+        display: grid;
+        grid-template-columns : repeat(2, 1fr); 
+        grid-template-rows : 1fr 1fr;
+        row-gap: 50px;
+        column-gap: 100px;
+        min-width: 490px;
+
+    }
+}
+

@@ -1,23 +1,26 @@
-/*@import "./base/reset";*/
-body {
-  font-family: "roboto";
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body, footer {
   margin: 0 auto;
   padding: 0;
-  max-width: 1224px;
+  max-width: 1440px;
+  box-sizing: border-box;
 }
 
-h1, h2, p, ol, li, a {
+h1, h2, h3, p, ol, ul, li, a, img {
   margin: 0;
   padding: 0;
-}
-
-ol, ul {
   list-style: none;
 }
 
 input {
-  /*  appearance: auto;
-      -webkit-appearance: none;*/
   border-radius: 0;
   padding: 0;
 }
@@ -25,12 +28,13 @@ input {
 /* Colors */
 /* Colors-background */
 /* Font size  */
-/* Responsive */
+/* breakpoints */
 /************* Header & Location ************/
 header {
   display: flex;
   justify-content: center;
-  margin: 14px 89px 3px 89px;
+  padding-top: 14px;
+  padding-bottom: 3px;
 }
 
 h1 {
@@ -55,7 +59,6 @@ h1 {
 
 input {
   border: none;
-  color: #101010;
   font-size: 16px;
 }
 input::-moz-placeholder {
@@ -73,26 +76,28 @@ input::placeholder {
   font-weight: bold;
 }
 
-#length {
+#color {
   width: 120px;
   height: 18px;
+  background-color: #EAEAEA;
+  font-weight: bold;
 }
 
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1440px) {
   header {
     justify-content: center;
     align-items: center;
-    margin: 0;
+    padding: 0;
     height: 96px;
   }
   .location {
     box-shadow: none;
   }
 }
-/* ----------- home ------------------ */
+/************** homepage *****************/
 section {
   background-color: #F6F6F6;
-  padding-bottom: 57px;
+  padding-bottom: 66px;
 }
 section h2 {
   height: 68px;
@@ -110,66 +115,120 @@ section p {
 
 nav h2 {
   margin-left: 20px;
-  padding: 48px 0 0 0;
+  padding: 44px 0 24px 0;
 }
-
 nav ol {
   display: flex;
   flex-direction: column;
   align-items: center;
+  counter-reset: nbr;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  margin-top: 42px;
+}
+
+.restaurant h2 {
+  height: 24px;
+  text-align: start;
+  font-size: 24px;
+  margin-left: 20px;
+  padding: 48px 0 24px 0;
+}
+
+.info {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  width: 82px;
+  height: 25px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 6px;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
 }
 
 @media only screen and (min-width: 768px) {
   nav ol {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+  }
+  .restaurant {
+    margin-top: 20px;
+  }
+  .restaurant h2 {
+    padding: 28px 0 4px 0;
   }
 }
-nav li {
-  margin-left: 0;
-}
-
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1440px) {
   section h2 {
     font-size: 40px;
   }
+  nav ol {
+    padding: 0 20px 20px 0;
+    text-align: center;
+  }
+  .restaurant {
+    margin-top: 0;
+    padding: 0 180px 30px 180px;
+  }
 }
-button {
+/***************  buttons ******************/
+.menu {
   display: block;
-  height: 50px;
+  text-align: center;
+  width: 218px;
   border: none;
   border-radius: 30px;
   background: linear-gradient(356deg, #9356DC 8%, #FF79DA 100%);
   box-shadow: 0 8px 8px 0 rgba(24, 23, 23, 0.25);
   color: white;
   font-size: 17.4px;
-  letter-spacing: 0.7px;
-  font-weight: 500;
-  padding: 13px 18.75px;
+  padding: 15px 6px;
   margin: 27px auto auto;
   cursor: pointer;
 }
-button:hover {
+.menu:hover {
   background: linear-gradient(356deg, #a16be0, #ff93e1);
 }
 
 nav li {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 72px;
-  width: 322px;
+  width: 250px;
+  padding: 26px 38px 26px 34px;
   background: #F6F6F6;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.14);
   border-radius: 20px;
-  margin: 26px 20px 24.92px 32.51px;
-  cursor: pointer;
-}
-nav li a {
-  text-decoration: none;
+  margin: 0px 20px 28px 32px;
+  counter-increment: nbr;
+  position: relative;
   font-weight: 500;
   color: #101010;
+  cursor: pointer;
+  gap: 20px;
+}
+
+nav ol li::before {
+  display: inline-block;
+  width: 16px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 5px 4px 5px 10px;
+  font-size: 16px;
+  content: counter(nbr);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-15px, -50%);
 }
 
 .fa-mobile-screen-button, .fa-list {
@@ -178,4 +237,109 @@ nav li a {
 
 .fa-store {
   color: #9356DC;
+}
+
+/*************   cards  ***********/
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 17px;
+  gap: 18px;
+}
+
+.container .card {
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card img {
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card .card-txt {
+  padding: 12px 0 12px 13px;
+}
+.card h3 {
+  margin-bottom: 4px;
+}
+.card p {
+  text-align: start;
+  margin: 0;
+}
+.card button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: #9356DC;
+  bottom: 33px;
+  right: 33px;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    min-width: 490px;
+  }
+}
+/*********** footer **********/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #353535;
+  padding: 22px 25px;
+  color: white;
+  line-height: 26px;
+  gap: 16px;
+}
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+footer .icon {
+  font-weight: 500;
+  padding-left: 11px;
+}
+
+li a {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1440px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 90px;
+    gap: 16px;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -19,22 +19,78 @@
     </header>    
         <div class="location">
            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Paris, Belleville" id="length">          
+            <input type="text" placeholder="Paris, Belleville" id="color">          
         </div>
     <main>
         <section>
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <a><button>Explorer nos restaurants</button></a>              
+            <a href="#card_menu" class="menu">Explorer nos restaurants</a>              
         </section>
             <nav>
                 <h2>Fonctionnement</h2>
                 <ol>
-                    <li><a href="#"><i class="fa-solid fa-mobile-screen-button fa-lg"></i>Choisissez un restaurant</a></li>
-                    <li><a href="#"><i class="fa-solid fa-list fa-lg" ></i>Composez votre menu</a></li>
-                    <li><a href="#"><i class="fa-solid fa-store fa-lg" ></i>Déguster au restaurant</a></li>
+                    <li><i class="fa-solid fa-mobile-screen-button fa-lg"></i>Choisissez un restaurant</li>
+                    <li><i class="fa-solid fa-list fa-lg" ></i>Composez votre menu</li>
+                    <li><i class="fa-solid fa-store fa-lg" ></i>Déguster au restaurant</li>
                 </ol>
-            </nav>                  
-    </main>    
+            </nav>
+        <section class="restaurant" id="card_menu"> 
+            <h2>Restaurant</h2>
+            <div class="container"> 
+                <a href="menu_La_palette_du_gout.html">
+                <article class="card">
+                    <img src="./assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout">
+                        <div class="info">Nouveau</div>  
+                        <div class="card-txt">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                            <button><i class="fa-regular fa-heart fa-2x empty-heart"></i></button>                                                      
+                        </div>
+                </article>        
+                </a>
+                <a href="menu_La_note_enchantee.html">
+                <article class="card">
+                    <img src="./assets/images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La palette du gout">
+                        <div class="info">Nouveau</div>
+                        <div class="card-txt">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                            <button><i class="fa-regular fa-heart fa-2x empty-heart"></i></button>
+                        </div>
+                </article>         
+                </a>                     
+                <a href="menu_A_La_française.html">
+                <article class="card">
+                    <img src="./assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="La palette du gout">
+                        <div class="card-txt">
+                            <h3>A la française</h3>
+                            <p>Cité Rouge</p>
+                            <button><i class="fa-regular fa-heart fa-2x empty-heart"></i></button>
+                        </div>
+                </article>        
+                </a>                
+                <a href="menu_Le_delice_des_sens.html">
+                <article class="card">
+                    <img src="./assets/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La palette du gout">
+                        <div class="card-txt">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                            <button><i class="fa-regular fa-heart fa-2x empty-heart"></i></button>
+                        </div>
+                </article>         
+                </a>  
+            </div>            
+        </section>
+    </main>
+    <footer>
+        <h3>ohmyfood</h3>
+        <ul>
+            <li><i class="fa-solid fa-utensils"></i><a class="icon" href="#">Proposer un restaurant</a></li>
+            <li><i class="fa-solid fa-handshake-angle fa-xs"></i><a class="icon" href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+        </ul>
+    </footer>    
 </body>
 </html>

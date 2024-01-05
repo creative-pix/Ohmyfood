@@ -2,7 +2,8 @@
 header {
     display: flex;
     justify-content: center;    
-    margin: 14px 89px 3px 89px;
+    padding-top: 14px;
+    padding-bottom: 3px;
 }
     
 h1 {
@@ -27,27 +28,29 @@ h1 {
 
 input {
     border: none;
-    color: $black;
     font-size: $base-font-size; 
     
     &::placeholder  {
         text-align: center;
-        background-color: $grey-lighten;
+        background-color: $grey-lighten; 
         color: #353535;
         font-style: normal;
         font-weight: bold;  }
 }
 
-#length {
+#color {
     width: 120px;
     height: 18px;
+    background-color: $grey-lighten;
+    font-weight: bold;
 }
 
 @media only screen and (min-width: $xlarge) {
+    
     header {    
         justify-content: center;
         align-items: center;
-        margin: 0;
+        padding: 0;
         height: 96px;     
     }
     

@@ -1,7 +1,7 @@
-/* ----------- home ------------------ */
+/************** homepage *****************/
 section { 
     background-color: $grey-light;
-    padding-bottom: 57px;
+    padding-bottom: 66px;
 
     h2 {
         height: 68px;
@@ -11,44 +11,89 @@ section {
         padding : 36px 58px 0 42px;
     }
     p {
-        text-align: center;
-        font-size: 18px;
-        color : $grey;
-        margin: 0 26px 0 34px;
+       text-align: center;
+       font-size: 18px;
+       color : $grey;
+       margin: 0 26px 0 34px;
     }     
 }    
 
-nav h2 {
-    margin-left: 20px;
-    padding: 48px 0 0 0;
-}
+nav {
 
-nav ol {
+    h2 {  
+        margin-left: 20px;
+        padding: 44px 0 24px 0;
+    }
+    ol {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       counter-reset: nbr;
+    }
+}    
+
+.restaurant {
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    background-color: $grey-light;
+    margin-top: 42px;
+}
+
+.restaurant h2 {
+    height: 24px;
+    text-align: start;
+    font-size: 24px;
+    margin-left: 20px;
+    padding: 48px 0 24px 0;
+}
+
+.info {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    width: 82px;
+    height: 25px;
+    font-weight: 500; 
+    text-align: center;
+    font-size: 16px;  
+    padding-top: 6px;
+    background-color: $color-green;
+    color: $color-green-font;
+    border-radius: 2px;
 }
 
 @media only screen and (min-width: $medium) {
-            
+                
     nav ol {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;           
-        }  
+        justify-content: center;                 
     }
 
-    nav li {
-        margin-left: 0;
+    .restaurant {
+        margin-top: 20px;
     }
 
+    .restaurant h2 {
+        padding: 28px 0 4px 0;
+    }  
+}    
+     
 @media only screen and ( min-width: $xlarge) {
+  
+    section h2 {           
+        font-size: 40px;       
+    }
+      
+    nav ol {       
+        padding: 0 20px 20px 0;
+        text-align: center;
+    }    
+    
+    .restaurant { 
+       margin-top: 0;    
+       padding: 0 180px 30px 180px;
 
-    section {
-        
-       h2 {
-        font-size: 40px;
-       }    
     }
 }
    
