@@ -168,6 +168,8 @@ nav ol {
   }
 }
 @media only screen and (min-width: 1440px) {
+}
+@media only screen and (min-width: 1224px) {
   section h2 {
     font-size: 40px;
   }
@@ -199,7 +201,7 @@ nav ol {
   background: linear-gradient(356deg, #a16be0, #ff93e1);
 }
 
-nav li {
+nav ol li {
   display: flex;
   align-items: center;
   width: 250px;
@@ -229,6 +231,18 @@ nav ol li::before {
   top: 50%;
   left: 0;
   transform: translate(-15px, -50%);
+}
+
+nav ol li::before {
+  display: inline-block;
+  width: 16px;
+  color: white;
+  margin-left: -60px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 5px 4px 5px 10px;
+  font-size: 16px;
+  content: counter(nbr);
 }
 
 .fa-mobile-screen-button, .fa-list {
