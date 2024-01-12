@@ -21,6 +21,9 @@
 nav ol li {
     display: flex;  
     justify-content: space-around;
+       
+}
+
 nav li {
     display: flex;  
     align-items: center;
@@ -35,14 +38,7 @@ nav li {
     font-weight: 500;
     color: $black;
     cursor: pointer;
-    counter-increment: nbr;
-    
-    a  {        
-        text-decoration: none;
-        font-weight: 500;
-        color: $black;
-                                            
-    }
+    gap: 14px;   
 }
 
 nav ol li::before {
@@ -50,12 +46,15 @@ nav ol li::before {
     display: inline-block;
     width: 16px;  
     color: white; 
-    margin-left: -60px;
     background-color: #9356DC;
     border-radius: 50%;
     padding: 5px 4px 5px 10px;
-    font-size: 16px;
+    font-size: $base-font-size;
     content: counter(nbr);
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translate(-15px, -50%);
   }
 
 .fa-mobile-screen-button, .fa-list {
