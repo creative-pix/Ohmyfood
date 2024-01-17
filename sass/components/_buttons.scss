@@ -14,22 +14,20 @@
     cursor: pointer;
 
     &:hover {    
-        background: linear-gradient(356deg, lighten($color-primary, 5), lighten($color-secondary ,5)); 
+    background: linear-gradient(356deg, lighten($color-primary, 5), lighten($color-secondary ,5)); 
     }
 }
 
 nav ol li {
-    display: flex;  
-    justify-content: space-around;
-       
+    display: flex;
 }
 
 nav li {
-    display: flex;  
+    display: inline-block;
     align-items: center;
-    width: 250px;
-    padding: 26px 38px 26px 34px; 
-    background: #F6F6F6;
+    width: 240px;
+    padding: 26px 48px 26px 39px; 
+    background: $grey-light;
     box-shadow: 0px 6px 15px 2px rgba(0,0,0,0.14);
     border-radius: 20px;
     margin: 0px 20px 28px 32px; 
@@ -38,15 +36,14 @@ nav li {
     font-weight: 500;
     color: $black;
     cursor: pointer;
-    gap: 14px;   
+    gap: 20px;   
 }
 
 nav ol li::before {
-
     display: inline-block;
     width: 16px;  
     color: white; 
-    background-color: #9356DC;
+    background-color: $color-primary;
     border-radius: 50%;
     padding: 5px 4px 5px 10px;
     font-size: $base-font-size;
@@ -54,8 +51,9 @@ nav ol li::before {
     position: absolute;
     top:50%;
     left: 0;
+    text-align: left;
     transform: translate(-15px, -50%);
-  }
+}
 
 .fa-mobile-screen-button, .fa-list {
     color: #7E7E7E;
@@ -64,5 +62,14 @@ nav ol li::before {
 .fa-store {
     color: $color-primary;
 }
+
+@media only screen and ( min-width: $xlarge) {
+
+    nav li {
+    margin: 0px 20px 28px 26px; 
+    }
+}
+
+
 
 

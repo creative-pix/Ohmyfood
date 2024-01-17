@@ -4,11 +4,18 @@ header {
     justify-content: center;    
     padding-top: 14px;
     padding-bottom: 3px;
-}
-    
-h1 {
-    font-family: 'Shrikhand', sans-serif;
-    font-weight: 400;
+
+    h1 {
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: 400;
+    }
+
+    @media only screen and (min-width: $xlarge) {
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            height: 96px;     
+        }
 }
 
 .location {
@@ -20,40 +27,32 @@ h1 {
     background-color: $grey-lighten;
     box-shadow: inset 0px 24px 5px -20px $grey-line,0px 10px 15px -3px $grey-line;
     gap: 17px;
-}
 
-.fa-location-dot {
-    color: #353535;
-}
-
-input {
-    border: none;
-    font-size: $base-font-size; 
-    
-    &::placeholder  {
-        text-align: center;
-        background-color: $grey-lighten; 
+    .fa-location-dot {
         color: #353535;
-        font-style: normal;
-        font-weight: bold;  }
-}
+    }
 
-#color {
-    width: 120px;
-    height: 18px;
-    background-color: $grey-lighten;
-    font-weight: bold;
+    input {
+        border: none;
+        font-size: $base-font-size; 
+        
+        &::placeholder  {
+            text-align: center;
+            background-color: $grey-lighten; 
+            color: #353535;
+            font-style: normal;
+            font-weight: bold;  }
+
+            &#color {
+                width: 120px;
+                height: 18px;
+                background-color: $grey-lighten;
+                font-weight: bold;
+            }
+    }
 }
 
 @media only screen and (min-width: $xlarge) {
-    
-    header {    
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        height: 96px;     
-    }
-
     h1 {
         font-size: 36px;
     }

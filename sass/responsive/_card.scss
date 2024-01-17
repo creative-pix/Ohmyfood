@@ -1,0 +1,19 @@
+
+@mixin responsive-card-medium() {
+
+    @media only screen and (min-width: $medium) {
+        display: grid;
+        grid-template-columns : repeat(2, 1fr); 
+        grid-template-rows : 1fr 1fr;
+        row-gap: 50px;
+        column-gap: 100px;
+        margin-top : 30px;
+    }
+}
+
+@mixin responsive-card-xlarge() {
+    
+    @media only screen and (min-width: $xlarge) {
+        min-width: 490px;
+    }
+}

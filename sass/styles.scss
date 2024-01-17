@@ -1,7 +1,9 @@
 @import "./base/base";
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./layouts/header";
 @import "./pages/homepage";
 @import "./components/buttons";
+@import "./responsive/card";
 @import "./components/card";
 @import "./layouts/footer";
