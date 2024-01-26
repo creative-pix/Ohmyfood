@@ -1,0 +1,91 @@
+/*************   menu 1 2 3 4 ***********/
+header {
+    align-items: center;
+    position: relative;
+
+    a { 
+    position: absolute;
+    left: 24px;
+    }
+}
+
+.pictures {
+    width: 100%;
+    min-height: 275px;
+    max-height: 400px;
+    aspect-ratio: 26/10;
+    object-fit: cover;
+}
+
+.menus {
+    display: flex;
+    max-width: 1055px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $grey-light;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    margin: 0 auto;
+    top: -50px;
+}
+
+.title {
+    width: 341px;
+    position: relative;
+    padding: 30px 22px 30px 0px;
+    margin: 0 auto;
+
+    h2 {
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+        padding: 0 60px 0 0;
+    }
+
+    .empty-heart {       
+        @include empty;
+        right: 26px;
+        bottom: 36px;
+    }
+
+    .full-heart {    
+        @include full;
+        right: 26px;
+        bottom: 36px;
+
+        &:hover {
+            opacity: 1;
+        }  
+    }
+}
+
+.entr {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .under-txt {
+        padding-bottom: 12px;
+
+        h3 {
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-bottom: 3px $color-green solid;
+        width: 40px;
+    //  height: 22px;
+        }
+    }
+}
+
+@media only screen and (min-width: $xlarge) {
+
+    .pictures {
+        max-height: 350px;
+
+}     
+}
+

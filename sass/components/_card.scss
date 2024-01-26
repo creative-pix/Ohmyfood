@@ -1,4 +1,4 @@
-/*************   cards  ***********/
+/****************   cards  ***************/
 .container {
     display: flex;
     flex-direction: column;   
@@ -20,10 +20,24 @@
             border-top-right-radius: 20px;
             }
 
+        .info {
+            position: absolute;
+            width: 82px;
+            top: 13px;
+            right: 12px;
+            font-weight: 500; 
+            text-align: center;
+            font-size: 16px;  
+            padding: 6px;
+            background-color: $color-green;
+            color: $color-green-font;
+            border-radius: 2px;
+        } 
+
         .card-txt {
             padding: 16px 0 16px 20px;
         }
-        
+
         &:hover {
             box-shadow: 0 8px 16px 6px rgba(0,0,0,0.2);
         }
@@ -37,39 +51,46 @@
             margin: 0;
         }
 
-        .empty-heart {
-            position: absolute;
-            border: none;
-            background-color: transparent;
-            color: $black;
-            bottom: 30px;
-            right: 25px;
-        //  cursor: pointer;
-            transform: scale(0.8);
+        .empty-heart {       
+            @include empty
         }
 
-        .full-heart {
-            position: absolute;
-            opacity: 0;
-            border: none;
-            background-color: transparent;
-            color: $color-primary;            
-            bottom: 30px;
-            right: 25px;
-            transform: scale(0.8);
-            transition: all .2s;
-        }
+        .full-heart {    
+            @include full;
 
-        .full-heart:hover {
+            &:hover {
             opacity: 1;
+            }  
         }
-        .full-heart:active {
-            opacity:1;
-        }
-        }    
-    
+    }
 
     @include responsive-card-medium;
 
     @include responsive-card-xlarge;
+}
+
+/***************    mini-cards   ***************/
+.cards {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 604px;
+    min-width: 319px;
+    background-color: white;
+    box-shadow: 0px 6px 15px 2px rgba(0,0,0,0.14);
+    border-radius: 20px;
+    padding: 13px 15px;
+    cursor: pointer;
+    margin: 0 auto;
+
+    p {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    margin: 0;
+    padding-top: 5px; 
+    }
+    .euro {
+        font-weight: bold;
+    }
 }

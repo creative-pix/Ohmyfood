@@ -23,13 +23,13 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50px;
     background-color: $grey-lighten;
     box-shadow: inset 0px 24px 5px -20px $grey-line,0px 10px 15px -3px $grey-line;
     gap: 17px;
+    padding: 17px 0;
 
     .fa-location-dot {
-        color: #353535;
+        color: $grey;
     }
 
     input {
@@ -39,7 +39,7 @@ header {
         &::placeholder  {
             text-align: center;
             background-color: $grey-lighten; 
-            color: #353535;
+            color: $grey;
             font-style: normal;
             font-weight: bold;  }
 
