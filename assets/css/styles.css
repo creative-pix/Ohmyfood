@@ -7,14 +7,14 @@ a {
   text-decoration: none;
 }
 
-body, footer, button {
+body, main, footer, button, article {
   margin: 0 auto;
   padding: 0;
   max-width: 1440px;
   box-sizing: border-box;
 }
 
-h1, h2, h3, p, ol, ul, li, a, img {
+h1, h2, h3, h4, p, ol, ul, li, a, img {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -104,7 +104,7 @@ section p {
   text-align: center;
   font-size: 18px;
   color: #353535;
-  margin: 0 26px 0 34px;
+  margin: 0 30px 27px 34px;
 }
 
 nav h2 {
@@ -167,21 +167,21 @@ nav ol {
   }
 }
 /***************  buttons ******************/
-.menu {
+.button {
   display: block;
   text-align: center;
   width: 218px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(356deg, #9356DC 8%, #FF79DA 100%);
+  background: linear-gradient(356deg, #9356DC 3%, #FF79DA 95%);
   box-shadow: 0 8px 8px 0 rgba(24, 23, 23, 0.25);
   color: white;
   font-size: 17.4px;
   padding: 15px 6px;
-  margin: 27px auto auto;
+  margin: 0 auto auto;
   cursor: pointer;
 }
-.menu:hover {
+.button:hover {
   background: linear-gradient(356deg, #a16be0, #ff93e1);
 }
 
@@ -212,7 +212,7 @@ nav ol li::before {
   color: white;
   background-color: #9356DC;
   border-radius: 50%;
-  padding: 5px 4px 5px 10px;
+  padding: 5px 4px 4px 10px;
   font-size: 16px;
   content: counter(nbr);
   position: absolute;
@@ -243,6 +243,7 @@ nav ol li::before {
   background-color: white;
   border-radius: 20px;
   position: relative;
+  transition: 0.2s ease-in-out;
 }
 .container .card img {
   width: 100%;
@@ -291,13 +292,12 @@ nav ol li::before {
   opacity: 0;
   border: none;
   background: linear-gradient(to left, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  transition: all 0.1s;
+  transition: all 0.15s;
 }
 .container .card .full-heart:hover {
   opacity: 1;
@@ -325,24 +325,51 @@ nav ol li::before {
   display: inline-flex;
   flex-direction: column;
   width: 100%;
-  max-width: 604px;
-  min-width: 319px;
   background-color: white;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.14);
   border-radius: 20px;
-  padding: 13px 15px;
+  padding: 12px 15px;
   cursor: pointer;
   margin: 0 auto;
+  margin-top: 12px;
+}
+.cards h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
 }
 .cards p {
   display: flex;
   justify-content: space-between;
   text-align: start;
   margin: 0;
+  font-size: 15.043px;
   padding-top: 5px;
 }
 .cards .euro {
   font-weight: bold;
+}
+
+.btn-v {
+  height: 69px;
+  width: 59px;
+  position: absolute;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  border: 0;
+  top: 152px;
+  right: 160px;
+  transition-duration: 0.6s;
+  overflow: hidden;
+}
+.btn-v:hover {
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.fa-circle-check {
+  font-size: 20px;
 }
 
 /*********** footer **********/
@@ -364,7 +391,7 @@ footer h3 {
 footer .icon {
   font-weight: 400;
   padding-left: 11px;
-  font-size: 14px;
+  font-size: 16px;
 }
 @media only screen and (min-width: 1024px) {
   footer {
@@ -387,7 +414,7 @@ footer .icon {
 }
 footer li a {
   font-weight: 300;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 /*************   menu 1 2 3 4 ***********/
@@ -417,21 +444,24 @@ header a {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   position: relative;
-  margin: 0 auto;
-  top: -50px;
+  margin: -50px auto;
+  padding-bottom: 40px;
 }
 
 .title {
-  width: 341px;
-  position: relative;
-  padding: 30px 22px 30px 0px;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
-}
-.title h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
   font-size: 28px;
-  padding: 0 60px 0 0;
+  position: relative;
+  padding: 30px 80px 35px 0;
+}
+.title i {
+  font-size: 32px;
+  margin-right: 20px;
+  top: 30px;
 }
 .title .empty-heart {
   position: absolute;
@@ -441,46 +471,74 @@ header a {
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  right: 26px;
-  bottom: 36px;
+  right: 0;
+  bottom: 0;
 }
 .title .full-heart {
   position: absolute;
   opacity: 0;
   border: none;
   background: linear-gradient(to left, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  transition: all 0.1s;
-  right: 26px;
-  bottom: 36px;
+  transition: all 0.15s;
+  right: 0;
+  bottom: 0;
 }
 .title .full-heart:hover {
   opacity: 1;
 }
 
-.entr {
+.menu {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  justify-content: center;
+  width: 93%;
+  padding-left: 13px;
+  padding-bottom: 40px;
 }
-.entr .under-txt {
-  padding-bottom: 12px;
-}
-.entr .under-txt h3 {
+.menu h3 {
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   text-transform: uppercase;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.menu h3:after {
+  content: "";
+  position: absolute;
   border-bottom: 3px #99E2D0 solid;
   width: 40px;
+  top: 28px;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+.menu h3:hover:after {
+  width: 80px;
+  transition: 0.2s ease-in-out;
 }
 
+@media only screen and (min-width: 867px) {
+  .menus {
+    margin-bottom: 0;
+  }
+  .menus .menu {
+    width: 100%;
+    padding-left: 0;
+  }
+  .menus .cards {
+    max-width: 604px;
+  }
+  .menus h3 {
+    transform: translate(21.5%);
+  }
+}
 @media only screen and (min-width: 1440px) {
   .pictures {
     max-height: 350px;

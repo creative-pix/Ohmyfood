@@ -16,14 +16,15 @@ $grey: #353535;
 $grey-light: #F6F6F6;
 $grey-lighten: #EAEAEA;
 $grey-line:rgba(0,0,0,0.1);
-$linear-gradient: linear-gradient(336deg, $color-primary 5%, $color-secondary 73%);
-
+$linear-gradient: linear-gradient(356deg, $color-primary 3%, $color-secondary 95%);
+$linear: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 /* Font size  */
 
 $base-font-size: 16px;
 
 /* breakpoints */
 
+$small: 867px;
 $medium: 1024px;
 $xlarge :1440px;
 

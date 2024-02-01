@@ -8,14 +8,14 @@ a {
     text-decoration: none;
 }
 
-body, footer, button {   
+body, main, footer, button, article {   
     margin: 0 auto;
     padding: 0;
     max-width: 1440px;
     box-sizing: border-box;
 }
 
-h1, h2, h3, p, ol, ul, li, a, img {
+h1, h2, h3, h4, p, ol, ul, li, a, img {
     margin: 0;
     padding: 0;
     list-style: none;

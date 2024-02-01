@@ -14,11 +14,10 @@
     opacity: 0;
     border: none;
     background: linear-gradient(to left, #9356DC, #FF79DA);
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;            
     right: 25px;
     bottom: 30px;
     transform: scale(0.8);
-    transition: all .1s;
+    transition: all .15s;
 }

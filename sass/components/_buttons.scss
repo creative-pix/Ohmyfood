@@ -1,16 +1,16 @@
 /***************  buttons ******************/
-.menu {
+.button {
     display: block;    
     text-align: center;
     width: 218px;
     border: none;
     border-radius: 30px;
-    background: linear-gradient(356deg, $color-primary 8%, $color-secondary 100%);
+    background: $linear-gradient;
     box-shadow: 0 8px 8px 0 rgba(24, 23, 23, 0.25);
     color: $white;
     font-size: 17.4px;
     padding: 15px 6px;
-    margin: 27px auto auto;
+    margin: 0 auto auto;
     cursor: pointer;
 
     &:hover {    
@@ -45,7 +45,7 @@ nav ol li::before {
     color: white; 
     background-color: $color-primary;
     border-radius: 50%;
-    padding: 5px 4px 5px 10px;
+    padding: 5px 4px 4px 10px;
     font-size: $base-font-size;
     content: counter(nbr);
     position: absolute;

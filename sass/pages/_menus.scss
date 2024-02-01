@@ -26,33 +26,36 @@ header {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     position: relative;
-    margin: 0 auto;
-    top: -50px;
+    margin: -50px auto;
+    padding-bottom: 40px;
 }
 
 .title {
-    width: 341px;
-    position: relative;
-    padding: 30px 22px 30px 0px;
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    position: relative;
+    padding: 30px 80px 35px 0; 
 
-    h2 {
-        font-family: 'Shrikhand', sans-serif;
-        font-weight: 400;
-        font-size: 28px;
-        padding: 0 60px 0 0;
+    i {
+    font-size: 32px;
+    margin-right: 20px;
+    top: 30px;
     }
 
     .empty-heart {       
         @include empty;
-        right: 26px;
-        bottom: 36px;
+        right: 0;
+        bottom: 0;
     }
 
     .full-heart {    
         @include full;
-        right: 26px;
-        bottom: 36px;
+        right: 0;
+        bottom: 0;
 
         &:hover {
             opacity: 1;
@@ -60,32 +63,62 @@ header {
     }
 }
 
-.entr {
+.menu {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    justify-content: center;
+    width: 93%;
+    padding-left: 13px;
+    padding-bottom: 40px;
 
-    .under-txt {
-        padding-bottom: 12px;
-
-        h3 {
+    h3 {
         font-family: Roboto;
         font-size: 18px;
         font-style: normal;
         font-weight: 300;
         text-transform: uppercase;
+        position: relative;
+        margin-bottom: 12px;
+        cursor: pointer;
+    }
+
+    h3:after {
+        content:"";
+        position: absolute;
         border-bottom: 3px $color-green solid;
         width: 40px;
-    //  height: 22px;
+        top: 28px;
+        left: 0;
+        transition: .2s ease-in-out;
+    }
+
+    h3:hover:after {
+        width: 80px;
+        transition: .2s ease-in-out;
+    }
+}
+@media only screen and ( min-width: $small ) {
+
+    .menus {
+    margin-bottom: 0;
+
+    .menu {
+        width: 100%;
+        padding-left: 0; 
         }
+        .cards {
+        max-width: 604px;    
+        }
+        h3 {
+        transform: translate(21.5%);
+        }   
     }
 }
 
 @media only screen and (min-width: $xlarge) {
 
     .pictures {
-        max-height: 350px;
-
+    max-height: 350px;
 }     
 }
 

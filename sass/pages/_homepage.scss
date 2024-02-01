@@ -14,7 +14,7 @@ section {
     text-align: center;
     font-size: 18px;
     color : $grey;
-    margin: 0 26px 0 34px;
+    margin: 0 30px 27px 34px;
     }     
 }    
 
@@ -73,7 +73,7 @@ nav {
 @media only screen and ( min-width: $xlarge) {
 
     section {
-        padding-bottom: 30px;
+        padding-bottom: 30px; 
 
         h2 {           
         font-size: 40px;
