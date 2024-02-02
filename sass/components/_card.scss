@@ -100,8 +100,8 @@
     .euro {
         font-weight: bold;
     }
-}
-.btn-v {
+    
+    .btn-v {
     height: 69px;
     width: 59px;
     position: absolute;
@@ -111,12 +111,15 @@
     border: 0;
     top: 152px;
     right: 160px;
-    transition-duration: 0.60s;
-    overflow: hidden;
+    transition-duration: 1s;
+ // overflow: hidden;
+
+
 
     &:hover {
         cursor: pointer;
-        margin-right: 60px;
+        transform: translate(-60px);
+    }
     }
 }
 

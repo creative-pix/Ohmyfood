@@ -25,6 +25,75 @@ input {
   padding: 0;
 }
 
+@keyframes loader {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader span {
+  font-size: 34px;
+  font-weight: 400;
+  font-family: "Shrikhand", sans-serif;
+  margin: 0 8px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: loader 650ms ease-in-out 3;
+  opacity: 1;
+}
+
+.loader span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loader span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.loader span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.loader span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.loader span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.loader span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
 /* Colors */
 /* Colors-background */
 /* Font size  */
@@ -188,6 +257,21 @@ nav ol {
 nav ol li {
   display: flex;
 }
+nav ol li::before {
+  display: inline-block;
+  width: 16px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 5px 4px 4px 10px;
+  font-size: 16px;
+  content: counter(nbr);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: left;
+  transform: translate(-15px, -50%);
+}
 
 nav li {
   display: inline-block;
@@ -204,22 +288,6 @@ nav li {
   color: #101010;
   cursor: pointer;
   gap: 20px;
-}
-
-nav ol li::before {
-  display: inline-block;
-  width: 16px;
-  color: white;
-  background-color: #9356DC;
-  border-radius: 50%;
-  padding: 5px 4px 4px 10px;
-  font-size: 16px;
-  content: counter(nbr);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  text-align: left;
-  transform: translate(-15px, -50%);
 }
 
 .fa-mobile-screen-button, .fa-list {
@@ -349,8 +417,7 @@ nav ol li::before {
 .cards .euro {
   font-weight: bold;
 }
-
-.btn-v {
+.cards .btn-v {
   height: 69px;
   width: 59px;
   position: absolute;
@@ -360,12 +427,11 @@ nav ol li::before {
   border: 0;
   top: 152px;
   right: 160px;
-  transition-duration: 0.6s;
-  overflow: hidden;
+  transition-duration: 1s;
 }
-.btn-v:hover {
+.cards .btn-v:hover {
   cursor: pointer;
-  margin-right: 60px;
+  transform: translate(-60px);
 }
 
 .fa-circle-check {
