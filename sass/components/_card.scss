@@ -72,57 +72,102 @@
 
 /***************    mini-cards   ***************/
 .cards {
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;
     width: 100%;
     background-color: white;
     box-shadow: 0px 6px 15px 2px rgba(0,0,0,0.14);
     border-radius: 20px;
     padding: 12px 15px;
     cursor: pointer;
+    overflow: hidden;
     margin: 0 auto;
     margin-top: 12px;
 
-    h4 {
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-    }
+    button {
+        width: 64px;
+        background-color: $color-green;
+        border-radius: 0 20px 20px 0;
+        color: white;
+        border: 0;
+        margin: -15px -80px -15px 15px;
+        transition-duration: 500ms;
+        }
 
-    p {
-    display: flex;
-    justify-content: space-between;
-    text-align: start;
-    margin: 0;
-    font-size: 15.043px;
-    padding-top: 5px; 
-    }
-    .euro {
-        font-weight: bold;
-    }
+        &:hover {
+            button { 
+            margin-right: -15px;    
+            }
+        }  
+
+    .content {
+        width: 100%;
+
+        h4 {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+        }
     
-    .btn-v {
-    height: 69px;
-    width: 59px;
-    position: absolute;
-    background-color: $color-green;
-    border-radius: 0 20px 20px 0;
-    color: white;
-    border: 0;
-    top: 152px;
-    right: 160px;
-    transition-duration: 1s;
- // overflow: hidden;
-
-
-
-    &:hover {
-        cursor: pointer;
-        transform: translate(-60px);
-    }
+        p {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+        margin: 0;
+        font-size: 15.043px;
+        padding-top: 5px; 
+        }
+    
+        .euro {
+            font-weight: bold;
+        }
     }
 }
 
 .fa-circle-check {
     font-size: 20px;
+}
+
+/***********  Animation cards ************/
+
+@keyframes effet {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 
+
+.card-1 {
+    animation: effet 200ms ease-in;
+}
+.card-2 {
+    animation: effet 400ms ease-in;
+}
+.card-3 {
+    animation: effet 600ms ease-in;
+}
+.card-4 {
+    animation: effet 800ms ease-in;
+}
+.card-5 {
+    animation: effet 1s ease-in;
+}
+.card-6 {
+    animation: effet 1.2s ease-in;
+}
+.card-7 {
+    animation: effet 1.4s ease-in;
+}
+.card-8 {
+    animation: effet 1.6s ease-in;
+}
+.card-9 {
+    animation: effet 1.8s ease-in;
+}
+.card-10 {
+    animation: effet 2s ease-in;
 }
