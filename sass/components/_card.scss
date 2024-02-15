@@ -83,6 +83,29 @@
     margin: 0 auto;
     margin-top: 12px;
 
+    .content {
+        width: 100%;
+
+        h4 {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        p {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+        margin: 0;
+        font-size: 15.043px;
+        padding-top: 5px; 
+        }
+
+        .euro {
+            font-weight: bold;
+        }
+    }
+
     button {
         width: 64px;
         background-color: $color-green;
@@ -98,29 +121,6 @@
             margin-right: -15px;    
             }
         }  
-
-    .content {
-        width: 100%;
-
-        h4 {
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-        }
-    
-        p {
-        display: flex;
-        justify-content: space-between;
-        text-align: start;
-        margin: 0;
-        font-size: 15.043px;
-        padding-top: 5px; 
-        }
-    
-        .euro {
-            font-weight: bold;
-        }
-    }
 }
 
 .fa-circle-check {
@@ -142,32 +142,32 @@
 } 
 
 .card-1 {
-    animation: effet 200ms ease-in;
+    animation: effet 300ms ease-in-out;
 }
 .card-2 {
-    animation: effet 400ms ease-in;
+    animation: effet 500ms ease-in-out;
 }
 .card-3 {
-    animation: effet 600ms ease-in;
+    animation: effet 800ms ease-in-out;
 }
 .card-4 {
-    animation: effet 800ms ease-in;
+    animation: effet 1s ease-in-out;
 }
 .card-5 {
-    animation: effet 1s ease-in;
+    animation: effet 1.2s ease-in-out;
 }
 .card-6 {
-    animation: effet 1.2s ease-in;
+    animation: effet 1.4s ease-in-out;
 }
 .card-7 {
-    animation: effet 1.4s ease-in;
+    animation: effet 1.6s ease-in-out;
 }
 .card-8 {
-    animation: effet 1.6s ease-in;
+    animation: effet 1.8s ease-in-out;
 }
 .card-9 {
-    animation: effet 1.8s ease-in;
+    animation: effet 2s ease-in-out;
 }
 .card-10 {
-    animation: effet 2s ease-in;
+    animation: effet 2.2s ease-in-out;
 }

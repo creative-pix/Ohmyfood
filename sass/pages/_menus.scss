@@ -15,6 +15,10 @@ header {
     max-height: 400px;
     aspect-ratio: 26/10;
     object-fit: cover;
+
+    @media only screen and (min-width: $xlarge) {
+        max-height: 350px;
+    }
 }
 
 .menus {
@@ -28,6 +32,21 @@ header {
     position: relative;
     margin: -50px auto;
     padding-bottom: 40px;
+
+    @media only screen and ( min-width: $small ) {
+    margin-bottom: 0;
+
+    .menu {
+        width: 100%;
+        padding-left: 0; 
+        }
+        .cards {
+        max-width: 604px;    
+        }
+        h3 {
+        transform: translate(21.5%);
+        }   
+    }
 }
 
 .title {
@@ -96,28 +115,4 @@ header {
         width: 80px;
         transition: .2s ease-in-out;
     }
-}
-@media only screen and ( min-width: $small ) {
-
-    .menus {
-    margin-bottom: 0;
-
-    .menu {
-        width: 100%;
-        padding-left: 0; 
-        }
-        .cards {
-        max-width: 604px;    
-        }
-        h3 {
-        transform: translate(21.5%);
-        }   
-    }
-}
-
-@media only screen and (min-width: $xlarge) {
-
-    .pictures {
-    max-height: 350px;
-}     
 }

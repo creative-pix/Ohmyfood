@@ -8,13 +8,17 @@ header {
     h1 {
         font-family: 'Shrikhand', sans-serif;
         font-weight: 400;
+
+        @media only screen and (min-width: $xlarge) {
+        font-size: 36px;
+        }
     }
 
     @media only screen and (min-width: $xlarge) {
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            height: 96px;     
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 96px;     
         }
 }
 
@@ -27,6 +31,10 @@ header {
     box-shadow: inset 0px 24px 5px -20px $grey-line,0px 10px 15px -3px $grey-line;
     gap: 17px;
     padding: 17px 0;
+
+    @media only screen and (min-width: $xlarge) {
+        box-shadow: none;
+        }
 
     .fa-location-dot {
         color: $grey;
@@ -49,15 +57,5 @@ header {
                 background-color: $grey-lighten;
                 font-weight: bold;
             }
-    }
-}
-
-@media only screen and (min-width: $xlarge) {
-    h1 {
-        font-size: 36px;
-    }
-    
-    .location {
-        box-shadow: none;
     }
 }

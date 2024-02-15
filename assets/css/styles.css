@@ -25,6 +25,7 @@ input {
   padding: 0;
 }
 
+/**************  loader ****************/
 @keyframes loader {
   0% {
     transform: translateY(0);
@@ -129,6 +130,11 @@ header h1 {
   font-weight: 400;
 }
 @media only screen and (min-width: 1440px) {
+  header h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1440px) {
   header {
     justify-content: center;
     align-items: center;
@@ -146,6 +152,11 @@ header h1 {
   box-shadow: inset 0px 24px 5px -20px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   gap: 17px;
   padding: 17px 0;
+}
+@media only screen and (min-width: 1440px) {
+  .location {
+    box-shadow: none;
+  }
 }
 .location .fa-location-dot {
   color: #353535;
@@ -168,14 +179,6 @@ header h1 {
   font-weight: bold;
 }
 
-@media only screen and (min-width: 1440px) {
-  h1 {
-    font-size: 36px;
-  }
-  .location {
-    box-shadow: none;
-  }
-}
 /************** homepage *****************/
 section {
   background-color: #F6F6F6;
@@ -281,7 +284,7 @@ nav ol li::before {
   color: white;
   background-color: #9356DC;
   border-radius: 50%;
-  padding: 5px 4px 4px 10px;
+  padding: 4px 4px 4px 10px;
   font-size: 16px;
   content: counter(nbr);
   position: absolute;
@@ -384,7 +387,7 @@ nav li {
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 .container .card .full-heart:hover {
   opacity: 1;
@@ -420,18 +423,6 @@ nav li {
   margin: 0 auto;
   margin-top: 12px;
 }
-.cards button {
-  width: 64px;
-  background-color: #99E2D0;
-  border-radius: 0 20px 20px 0;
-  color: white;
-  border: 0;
-  margin: -15px -80px -15px 15px;
-  transition-duration: 500ms;
-}
-.cards:hover button {
-  margin-right: -15px;
-}
 .cards .content {
   width: 100%;
 }
@@ -451,6 +442,18 @@ nav li {
 .cards .content .euro {
   font-weight: bold;
 }
+.cards button {
+  width: 64px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  border: 0;
+  margin: -15px -80px -15px 15px;
+  transition-duration: 500ms;
+}
+.cards:hover button {
+  margin-right: -15px;
+}
 
 .fa-circle-check {
   font-size: 20px;
@@ -468,43 +471,43 @@ nav li {
   }
 }
 .card-1 {
-  animation: effet 200ms ease-in;
+  animation: effet 300ms ease-in-out;
 }
 
 .card-2 {
-  animation: effet 400ms ease-in;
+  animation: effet 500ms ease-in-out;
 }
 
 .card-3 {
-  animation: effet 600ms ease-in;
+  animation: effet 800ms ease-in-out;
 }
 
 .card-4 {
-  animation: effet 800ms ease-in;
+  animation: effet 1s ease-in-out;
 }
 
 .card-5 {
-  animation: effet 1s ease-in;
+  animation: effet 1.2s ease-in-out;
 }
 
 .card-6 {
-  animation: effet 1.2s ease-in;
+  animation: effet 1.4s ease-in-out;
 }
 
 .card-7 {
-  animation: effet 1.4s ease-in;
+  animation: effet 1.6s ease-in-out;
 }
 
 .card-8 {
-  animation: effet 1.6s ease-in;
+  animation: effet 1.8s ease-in-out;
 }
 
 .card-9 {
-  animation: effet 1.8s ease-in;
+  animation: effet 2s ease-in-out;
 }
 
 .card-10 {
-  animation: effet 2s ease-in;
+  animation: effet 2.2s ease-in-out;
 }
 
 /*********** footer **********/
@@ -569,6 +572,11 @@ header a {
   aspect-ratio: 26/10;
   object-fit: cover;
 }
+@media only screen and (min-width: 1440px) {
+  .pictures {
+    max-height: 350px;
+  }
+}
 
 .menus {
   display: flex;
@@ -581,6 +589,21 @@ header a {
   position: relative;
   margin: -50px auto;
   padding-bottom: 40px;
+}
+@media only screen and (min-width: 867px) {
+  .menus {
+    margin-bottom: 0;
+  }
+  .menus .menu {
+    width: 100%;
+    padding-left: 0;
+  }
+  .menus .cards {
+    max-width: 604px;
+  }
+  .menus h3 {
+    transform: translate(21.5%);
+  }
 }
 
 .title {
@@ -620,7 +643,7 @@ header a {
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  transition: all 0.15s;
+  transition: all 0.2s;
   right: 0;
   bottom: 0;
 }
@@ -658,25 +681,4 @@ header a {
 .menu h3:hover:after {
   width: 80px;
   transition: 0.2s ease-in-out;
-}
-
-@media only screen and (min-width: 867px) {
-  .menus {
-    margin-bottom: 0;
-  }
-  .menus .menu {
-    width: 100%;
-    padding-left: 0;
-  }
-  .menus .cards {
-    max-width: 604px;
-  }
-  .menus h3 {
-    transform: translate(21.5%);
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .pictures {
-    max-height: 350px;
-  }
 }/*# sourceMappingURL=styles.css.map */
