@@ -388,7 +388,7 @@ nav li {
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 .container .card .full-heart:hover {
   opacity: 1;
@@ -644,7 +644,7 @@ header a {
   right: 25px;
   bottom: 30px;
   transform: scale(0.8);
-  transition: all 0.2s;
+  transition: all 0.4s;
   right: 0;
   bottom: 0;
 }
