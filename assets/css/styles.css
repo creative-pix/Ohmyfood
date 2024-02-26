@@ -7,7 +7,7 @@ a {
   text-decoration: none;
 }
 
-body, main, footer, button, article {
+body, main, footer, article {
   margin: 0 auto;
   padding: 0;
   max-width: 1440px;
@@ -351,9 +351,13 @@ nav li {
   text-align: center;
   font-size: 16px;
   padding: 6px;
-  background-color: #99E2D0;
   color: #008766;
+  background-color: #99E2D0;
   border-radius: 2px;
+}
+.container .card .card-heart {
+  display: flex;
+  justify-content: space-between;
 }
 .container .card .card-txt {
   padding: 16px 0 16px 20px;
@@ -368,30 +372,38 @@ nav li {
   text-align: start;
   margin: 0;
 }
-.container .card .empty-heart {
-  position: absolute;
+.container .card .heart {
+  position: relative;
+  width: 50px;
   border: none;
   background-color: transparent;
-  color: #101010;
-  right: 25px;
-  bottom: 30px;
-  transform: scale(0.8);
+  overflow: hidden;
+  cursor: pointer;
 }
-.container .card .full-heart {
+.container .card .heart .empty-heart {
+  position: absolute;
+  left: 0px;
+  bottom: 35px;
+}
+.container .card .heart .full-heart {
   position: absolute;
   opacity: 0;
-  border: none;
   background: linear-gradient(to left, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  right: 25px;
-  bottom: 30px;
-  transform: scale(0.8);
-  transition: all 0.4s;
+  left: 0px;
+  bottom: 35px;
 }
-.container .card .full-heart:hover {
+.container .card .heart:focus .empty-heart {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.container .card .heart:focus .full-heart {
   opacity: 1;
+  left: 0px;
+  bottom: 35px;
+  transition: all 0.4s ease-in-out;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -413,12 +425,12 @@ nav li {
 
 /***************    mini-cards   ***************/
 .cards {
+  position: relative;
   display: flex;
   width: 100%;
   background-color: white;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.14);
   border-radius: 20px;
-  padding: 12px 15px;
   cursor: pointer;
   overflow: hidden;
   margin: 0 auto;
@@ -426,34 +438,56 @@ nav li {
 }
 .cards .content {
   width: 100%;
+  padding: 12px 15px;
+  box-sizing: border-box;
 }
 .cards .content h4 {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
+  width: 100%;
 }
-.cards .content p {
+.cards .content .text {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  transition: 0.3s ease-in-out;
+}
+.cards .content .text p {
   text-align: start;
   margin: 0;
   font-size: 15.043px;
   padding-top: 5px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.cards .content .euro {
+.cards .content .text .euro {
   font-weight: bold;
+  padding-right: 15px;
 }
 .cards button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
   width: 64px;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
   color: white;
   border: 0;
-  margin: -15px -80px -15px 15px;
-  transition-duration: 500ms;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
+.cards:hover .content .text {
+  width: 90%;
 }
 .cards:hover button {
-  margin-right: -15px;
+  transform: translateX(6%);
 }
 
 .fa-circle-check {
@@ -615,41 +649,43 @@ header a {
   font-weight: 400;
   font-size: 28px;
   position: relative;
-  padding: 30px 80px 35px 0;
+  padding: 30px 30px 35px 0;
+  gap: 10px;
 }
-.title i {
-  font-size: 32px;
-  margin-right: 20px;
-  top: 30px;
-}
-.title .empty-heart {
-  position: absolute;
+.title .heart {
+  position: relative;
+  width: 50px;
   border: none;
   background-color: transparent;
-  color: #101010;
-  right: 25px;
-  bottom: 30px;
-  transform: scale(0.8);
-  right: 0;
-  bottom: 0;
+  overflow: hidden;
+  cursor: pointer;
 }
-.title .full-heart {
+.title .heart .empty-heart {
+  position: absolute;
+  left: 0px;
+  bottom: 35px;
+  left: 20px;
+  bottom: 8px;
+}
+.title .heart .full-heart {
   position: absolute;
   opacity: 0;
-  border: none;
   background: linear-gradient(to left, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  right: 25px;
-  bottom: 30px;
-  transform: scale(0.8);
-  transition: all 0.4s;
-  right: 0;
-  bottom: 0;
+  left: 0px;
+  bottom: 35px;
+  left: 20px;
+  bottom: 8px;
 }
-.title .full-heart:hover {
+.title .heart:focus .empty-heart {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.title .heart:focus .full-heart {
   opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu {

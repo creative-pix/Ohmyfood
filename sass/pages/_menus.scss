@@ -57,29 +57,40 @@ header {
     font-weight: 400;
     font-size: 28px;
     position: relative;
-    padding: 30px 80px 35px 0; 
+    padding: 30px 30px 35px 0;
+    gap: 10px;
 
-    i {
-    font-size: 32px;
-    margin-right: 20px;
-    top: 30px;
-    }
+    .heart {
 
-    .empty-heart {       
-        @include empty;
-        right: 0;
-        bottom: 0;
-    }
+        @include heart;
+        
+            .empty-heart {
 
-    .full-heart {    
-        @include full;
-        right: 0;
-        bottom: 0;
+                @include empty;
+                left: 20px;
+                bottom: 8px;
+            }
 
-        &:hover {
+            .full-heart  {
+
+                @include full;
+                left: 20px;
+                bottom: 8px; 
+            }
+
+        &:focus {
+    
+        .empty-heart {
+            opacity: 0;
+            transition: all .4s ease-in-out;
+        }
+
+        .full-heart {
             opacity: 1;
-        }  
-    }
+            transition: all .4s ease-in-out;
+        }
+        }
+    } 
 }
 
 .menu {

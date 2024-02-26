@@ -1,24 +1,26 @@
 /*************** heart **************/
-@mixin empty {
-    position: absolute;
+@mixin heart {
+    position: relative;
+    width: 50px;
     border: none;
     background-color: transparent;
-    color: $black;
-    right: 25px;
-    bottom: 30px;
-    transform: scale(0.8);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@mixin empty {
+    position: absolute;
+    left: 0px;
+    bottom : 35px;
 }
 
 @mixin full {
     position: absolute;
     opacity: 0;
-    border: none;
     background: linear-gradient(to left, #9356DC, #FF79DA);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;            
-    right: 25px;
-    bottom: 30px;
-    transform: scale(0.8);
-    transition: all .4s;
+    left: 0px;
+    bottom : 35px;
 }

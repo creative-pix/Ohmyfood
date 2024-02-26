@@ -1,9 +1,9 @@
 /****************   cards  ***************/
 .container {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     margin: 0 17px;
-    gap: 18px;   
+    gap: 18px;
 
     .card {
         display: flex;
@@ -11,36 +11,41 @@
         background-color: white;
         border-radius: 20px;
         position: relative;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
 
-        img {        
+        img {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 26/9;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
-            }
+        }
 
         .info {
             position: absolute;
             width: 82px;
             top: 13px;
             right: 12px;
-            font-weight: 500; 
+            font-weight: 500;
             text-align: center;
-            font-size: 16px;  
+            font-size: 16px;
             padding: 6px;
-            background-color: $color-green;
             color: $color-green-font;
+            background-color: $color-green;
             border-radius: 2px;
-        } 
+        }
+        .card-heart {
+            display: flex;
+            justify-content: space-between;
+        
+        }
 
         .card-txt {
             padding: 16px 0 16px 20px;
         }
 
         &:hover {
-            box-shadow: 0 8px 16px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px 6px rgba(0, 0, 0, 0.2);
         }
 
         h3 {
@@ -52,16 +57,34 @@
             margin: 0;
         }
 
-        .empty-heart {       
-            @include empty
-        }
+        .heart {
 
-        .full-heart {    
-            @include full;
+            @include heart;
 
-            &:hover {
-            opacity: 1;
-            }  
+                .empty-heart {
+
+                    @include empty
+                }
+
+                .full-heart  {
+
+                    @include full
+                }
+
+            &:focus {
+        
+            .empty-heart {
+                opacity: 0;
+                transition: all .4s ease-in-out;
+            }
+
+            .full-heart {
+                opacity: 1;
+                left: 0px;
+                bottom: 35px;
+                transition: all .4s ease-in-out;
+            }
+            }
         }
     }
 
@@ -72,12 +95,12 @@
 
 /***************    mini-cards   ***************/
 .cards {
+    position: relative;
     display: flex;
     width: 100%;
     background-color: white;
-    box-shadow: 0px 6px 15px 2px rgba(0,0,0,0.14);
+    box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.14);
     border-radius: 20px;
-    padding: 12px 15px;
     cursor: pointer;
     overflow: hidden;
     margin: 0 auto;
@@ -85,42 +108,66 @@
 
     .content {
         width: 100%;
+        padding: 12px 15px;
+        box-sizing: border-box;
 
         h4 {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
+            width: 100%;
         }
 
-        p {
-        display: flex;
-        justify-content: space-between;
-        text-align: start;
-        margin: 0;
-        font-size: 15.043px;
-        padding-top: 5px; 
-        }
+        .text {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            transition: 0.3s ease-in-out;
 
-        .euro {
-            font-weight: bold;
+            p {
+                text-align: start;
+                margin: 0;
+                font-size: 15.043px;
+                padding-top: 5px;
+                width: 100%;
+                max-width: 300px;
+                box-sizing: border-box;
+                padding-right: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .euro {
+                font-weight: bold;
+                padding-right: 15px;
+            }
         }
     }
 
     button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
         width: 64px;
         background-color: $color-green;
         border-radius: 0 20px 20px 0;
         color: white;
         border: 0;
-        margin: -15px -80px -15px 15px;
-        transition-duration: 500ms;
+        transform: translateX(100%);
+        transition: 0.4s ease-in-out;
+    }
+
+    &:hover {
+        .content .text {
+            width: 90%;
         }
 
-        &:hover {
-            button { 
-            margin-right: -15px;    
-            }
-        }  
+        button {
+            transform: translateX(06%);
+        }
+    }
 }
 
 .fa-circle-check {
@@ -134,12 +181,12 @@
         opacity: 0;
         transform: translateX(-200px);
     }
-    
+
     100% {
         opacity: 1;
         transform: translateX(0);
     }
-} 
+}
 
 .card-1 {
     animation: effet 300ms ease-in-out;
